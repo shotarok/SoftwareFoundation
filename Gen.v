@@ -360,6 +360,7 @@ Proof.
   Case "l1 is [].". simpl.
     intros l2 n eq. apply eq.
   Case "l1 is cons.".
+  (* intros H. simpl. *)
     induction l2 as [| x2' l2'].
     SCase "l2 is [].".
       intro n. simpl. intro eq.
@@ -398,6 +399,7 @@ Proof.
   (* FILL IN HERE *)
   intros X n l.
   generalize dependent n.
+  (*  generalize n. *)
   generalize dependent l.
   induction l as [| x l'].
   Case "l is [].". intros n H. simpl.
